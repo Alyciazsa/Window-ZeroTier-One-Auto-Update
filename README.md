@@ -9,14 +9,10 @@ Just set task to run at time you need. Daily, Weekly or run at startup
 
 What this .bat do ?
 
-curl "https://download.zerotier.com/dist/ZeroTierOne.msi" -o "C:\ProgramData\ZeroTier\ZeroTierOne.msi" <<< Download Latest version from ZeroTier
+:install ZeroTierOne by Winget
+winget install ZeroTier.ZeroTierOne
 
-msiexec /i "C:\ProgramData\ZeroTier\ZeroTierOne.msi" /qn   <<< Silently Install
-
-del "C:\ProgramData\ZeroTier\ZeroTierOne.msi"   <<< Delete file after installed
-
-net stop "ZeroTierOneService"             <<<
-
-net start "ZeroTierOneService"            <<< Restart ZeroTier Services
+:Restart Service
+sc stop "ZeroTierOneService" && sc start "ZeroTierOneService"
 
 exit
