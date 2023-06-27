@@ -10,9 +10,11 @@ Just set task to run at time you need. Daily, Weekly or run at startup
 What this .bat do ?
 
 :install ZeroTierOne by Winget
+
 winget install ZeroTier.ZeroTierOne
 
 :Restart Service
+
 sc stop "ZeroTierOneService" && sc start "ZeroTierOneService"
 
 exit
