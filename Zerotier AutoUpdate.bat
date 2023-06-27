@@ -1,5 +1,5 @@
-#install ZeroTierOne by Winget
+:install ZeroTierOne by Winget
 winget install ZeroTier.ZeroTierOne
-#Restart Service
+:Restart Service
 sc stop "ZeroTierOneService" && sc start "ZeroTierOneService"
 exit
